@@ -13,17 +13,26 @@
     <title>Questions and Answer Page</title>
 </head>
 <body>
-<div class="d-flex">
-    <div class="p-4"><img src="images/Vector.png" alt="logo"></div>
-    <div class="container d-flex pt-4 justify-content-center">
-        <div>
-            <ul class="d-flex gap-4">
-                <li class="list-group-item pe-4"><a href="#" class="text-decoration-none text-white">Home</li></a> 
-                <li class="list-group-item pe-4" data-bs-toggle="modal" data-bs-target="#overlayModal">Products <span><img src="/images/expand_more.png" alt="" class="ps-2"></span></li>
-                <li class="list-group-item pe-4"><a href="#" class="text-decoration-none text-white">Pricing</li></a> 
-            </ul>
+<div class="container-fluid">
+    <nav class="navbar">
+        <img src="/images/Vector.png" alt="logo" class="p-2">
+        <ul class="navmenu list-unstyled">
+            <li class="navitem">
+                <a href="#" class="navlink text-white text-decoration-none">Home</a>
+            </li>
+           <li class="list-group-item pe-4" data-bs-toggle="modal" data-bs-target="#overlayModal">Products <span><img src="/images/expand_more.png" alt="" class=""></span></li>
+            <li class="navitem">
+                <a href="#" class="navlink text-white text-decoration-none">Pricing</a>
+            </li>
+        </ul>
+        <div class="hamburger p-2">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
-    </div>
+        </nav>
+    </nav>
+ 
     <div class="modal fade" id="overlayModal" tabindex="-1" aria-labelledby="overlayModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -101,5 +110,20 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+<script>
+    const hamburger=document.querySelector('.hamburger');
+const Navmenu=document.querySelector('.navmenu');
+
+hamburger.addEventListener('click', ()=>{
+hamburger.classList.toggle('active')
+Navmenu.classList.toggle('active')
+})
+
+document.querySelectorAll('.navlink').forEach(n => n.addEventListener('click', ()=>{
+  hamburger.classList.remove('active');
+  Navmenu.classList.remove('active');
+}))
+</script>
 </body>
 </html>

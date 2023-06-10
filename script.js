@@ -101,9 +101,3 @@ positionSelect.addEventListener("change", function () {
 
 
 
-
-
-
-
-
-
