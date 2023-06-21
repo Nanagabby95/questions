@@ -19,6 +19,14 @@ p{
     background-clip: text;
     -text-fill-color: transparent;
 }
+
+.h3-gradient{
+  background: linear-gradient(04.09deg, #0CE37B 48.07%, #1393EC 25.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -text-fill-color: transparent
+}
 .btn-primary2{
     width: 100%;
     background-color: #3A95C9 !important;
@@ -58,14 +66,23 @@ p{
   }
   .compiler-hero-wrapper{
     padding-top: 6em !important;
-  }
+}
 .navbar{
 display: flex;
-justify-content: space-between;
+justify-content: left!important;
+/* gap: 5em !important; */
 }
+.nav-wrapper{
+  align-items: center !important;
+  justify-content: center !important;
+}
+.logo-wrapper{
+  margin-right: 500px !important;
+}
+
 .navmenu{
 display: flex;
-justify-content: space-between;
+justify-content:center !important;
 gap: 3em;
 }
 li{
@@ -92,25 +109,25 @@ li{
   .hamburger{
     display: block;
   }
-  .hamburger.active .bar:nth-child(2){
-    opacity: 0;
+  .logo-wrapper{
+    margin-right: 0!important;
   }
-  .hamburger.active .bar:nth-child(1){
-    transform: translateY(15px) rotate(45deg);
-  }
-  .hamburger.active .bar:nth-child(2){
-    transform: translateY(-7px) rotate(-45deg);
-  }
+  .navbar{
+    display: flex;
+    justify-content: space-between!important;
+    }
   .navmenu{
     position: fixed;
     left: -100%;
-    top: 70px;
-    gap: 0;
+    top: -100px;
+    gap: 3em;
+    padding-right: 150px !important;
     flex-direction: column;
-    background-color: #011B33;
-    width: 100%;
-    height: 20%;
-    text-align: center;
+    background-color: #011C34;
+    width: 80%;
+    height: 100vh !important;
+    text-align: left !important;
+    align-items: left !important;
     transition: 0.3s;
   }
   .nav-item{
@@ -119,9 +136,57 @@ li{
   .navmenu.active{
     left: 0;
   }
+  .hidden-li{
+    display: block !important;
+  }
+  .h3-gradient{
+    font-size: 19px !important;
+  }
+  .questionHeadings{
+    font-size: 17px;
+  }
+  .gradient-paragraph{
+    font-size: 13px;
+  }
 }
 @media (min-width:900px) {
     form{
         width: 50% !important;
-    }
+}
+    
+}
+@media (width>=820px) {
+  .logo-wrapper{
+    margin-right: 0!important;
+
+  }
+  .navbar{
+    display: flex;
+    justify-content: flex-start !important;
+  }
+
+  .navmenu{
+    margin-left: 200px;
+  }
+    
+}
+@media (width>=1024px) {
+
+  .navmenu{
+    margin-left: 370px;
+  }
+  .hidden-li{
+    display: none;
+  }
+    
+}
+@media (width>=1280px) {
+
+  .navmenu{
+    margin-left: 450px;
+  }
+  .hidden-li{
+    display: none;
+  }
+    
 }
